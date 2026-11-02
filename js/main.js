@@ -37,7 +37,7 @@
     if (lenis) lenis.scrollTo(target, { offset: -60 });
     else target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
   };
-  $$('a[href^="#"]').forEach(a => {
+  $$('a[href^="#"]:not([data-skip])').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
       if (id.length < 2) return;
@@ -78,17 +78,41 @@
     dispatchEvent(new Event('coliseu:ready'));
     if (lenis) lenis.start();
     introHero();
-    setTimeout(() => $('.wa').classList.add('is-on'), 2400);
   }
 
+  // Ato I entra como a abertura de um filme: o nome se assenta, depois o convite para rolar
   function introHero() {
     if (!hasGsap || reduceMotion) return;
     const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-    tl.from('.hero__title .line > span', { yPercent: 110, duration: 1.4, stagger: 0.12 }, 0.1)
-      .from('.hero .eyebrow', { opacity: 0, y: 16, duration: 1 }, 0.3)
-      .from('.hero__lede, .hero__actions', { opacity: 0, y: 24, duration: 1.1, stagger: 0.1 }, 0.5)
-      .from('.hero__meter, .hero__hint, .nav', { opacity: 0, duration: 1.2 }, 0.6);
+    tl.from('.hero__letterbox i', { scaleY: 6, duration: 1.8, ease: 'expo.inOut' }, 0)
+      .from('.act__mark', { opacity: 0, letterSpacing: '.6em', filter: 'blur(14px) drop-shadow(0 10px 40px rgba(0,0,0,.55))', duration: 2.4 }, 0.5)
+      .from('.act__eyebrow, .act__sub', { opacity: 0, y: 14, duration: 1.4, stagger: 0.15 }, 1.2)
+      .from('.act__cue, .hero__skip, .hero__progress, .nav', { opacity: 0, duration: 1.4 }, 1.8);
   }
+
+  /* --- Hero: progresso da rolagem dentro da abertura ---------------------------- */
+  const hero = $('[data-hero]');
+  const wa = $('.wa');
+  function heroProgress() {
+    const total = hero.offsetHeight - innerHeight;
+    const p = reduceMotion ? 1 : Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / Math.max(total, 1)));
+    if (!reduceMotion) hero.style.setProperty('--p', p.toFixed(4));
+    window.__heroP = p;
+    hero.classList.toggle('is-arrived', p > 0.9);
+    // O botão do WhatsApp só aparece depois da abertura, para não competir com o filme
+    wa.classList.toggle('is-on', finished && hero.getBoundingClientRect().bottom < innerHeight * 0.6);
+  }
+  heroProgress();
+  addEventListener('scroll', heroProgress, { passive: true });
+  addEventListener('resize', heroProgress);
+
+  // "Pular abertura" percorre a sequência inteira depressa, em vez de cortar para o fim
+  $('[data-skip]').addEventListener('click', e => {
+    e.preventDefault();
+    const end = hero.offsetTop + hero.offsetHeight - innerHeight;
+    if (lenis) lenis.scrollTo(end, { duration: 2.6, easing: t => 1 - Math.pow(1 - t, 3) });
+    else scrollTo({ top: end, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
 
   /* --- Navegação ----------------------------------------------------------- */
   const nav = $('[data-nav]');
@@ -212,6 +236,37 @@
       if (entries[0].isIntersecting) { run(); obs.disconnect(); }
     }, { threshold: 0.6 }).observe(el);
   });
+
+  /* --- Fotos que se abrem como portões quando entram na tela -------------------- */
+  const doorObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-open');
+      doorObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.35 });
+  $$('.duo').forEach(el => doorObserver.observe(el));
+
+  const courts = $('.courts');
+  if (courts) {
+    new IntersectionObserver((entries, obs) => {
+      if (!entries[0].isIntersecting) return;
+      $$('rect, line', courts).forEach((el, i) => { el.style.transitionDelay = `${i * 70}ms`; });
+      courts.classList.add('is-on');
+      obs.disconnect();
+    }, { threshold: 0.6 }).observe(courts);
+  }
+
+  // Os portões da seção de contato abrem conforme a seção sobe na tela
+  const contactDoors = $('.contact__doors');
+  if (contactDoors) {
+    if (hasGsap && !reduceMotion) {
+      ScrollTrigger.create({
+        trigger: '.contact', start: 'top 85%', end: 'top 15%', scrub: true,
+        onUpdate: self => contactDoors.style.setProperty('--open', self.progress.toFixed(3)),
+      });
+    } else contactDoors.style.setProperty('--open', 1);
+  }
 
   /* --- Eventos: painéis que se abrem ---------------------------------------- */
   const events = $$('.event');

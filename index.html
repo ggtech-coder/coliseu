@@ -78,31 +78,52 @@
 
   <main id="conteudo">
 
-    <!-- HERO — arena 3D com 3.000 lugares -->
-    <section class="hero" id="topo">
-      <canvas class="hero__canvas" data-arena aria-label="Arena em 3D com 3.000 lugares iluminando-se"></canvas>
-      <div class="hero__fallback" aria-hidden="true"></div>
-      <div class="hero__shade" aria-hidden="true"></div>
+    <!-- HERO — abertura em três atos, guiada pela rolagem -->
+    <section class="hero" id="topo" data-hero>
+      <div class="hero__sticky">
+        <canvas class="hero__canvas" data-arena aria-label="Animação: os portões de bronze do Coliseu se abrem e revelam a arena com 3.000 lugares"></canvas>
+        <div class="hero__fallback" aria-hidden="true"></div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__flash" aria-hidden="true"></div>
+        <div class="hero__letterbox" aria-hidden="true"><i></i><i></i></div>
 
-      <div class="hero__content">
-        <p class="eyebrow"><span>Av. Juruá, 447</span><span>Alphaville · Barueri</span></p>
-        <h1 class="hero__title">
-          <span class="line"><span>A arena</span></span>
-          <span class="line"><span>de Alphaville</span></span>
-        </h1>
-        <p class="hero__lede">O maior centro de eventos da região. Uma plenária de mais de 2.000&nbsp;m², palco de 245&nbsp;m² e lugar para até <strong>3.000 pessoas</strong> — a poucos minutos dos principais hotéis.</p>
-        <div class="hero__actions">
-          <a class="btn" href="#contato">Agendar uma visita</a>
-          <a class="btn btn--ghost" href="#monte">Montar meu evento</a>
+        <!-- Ato I: diante dos portões -->
+        <div class="act act--one" aria-hidden="true">
+          <p class="act__eyebrow">Av. Juruá, 447 · Alphaville · Barueri</p>
+          <p class="act__mark">Coliseu</p>
+          <p class="act__sub">Convenções</p>
+          <p class="act__cue"><span>Role para abrir os portões</span><i></i></p>
         </div>
-      </div>
 
-      <div class="hero__meter" aria-hidden="true">
-        <span class="hero__roman">MMM</span>
-        <span class="hero__seats"><b data-seat-count>0</b> de 3.000 lugares acesos</span>
+        <!-- Ato II: os portões se abrem -->
+        <div class="act act--two" aria-hidden="true">
+          <p>Do outro lado dos portões, <em>2.000&nbsp;m² de plenária</em>, um palco de 245&nbsp;m² e lugar para 3.000 pessoas.</p>
+        </div>
+
+        <!-- Ato III: a arena revelada -->
+        <div class="hero__content">
+          <p class="eyebrow"><span>O maior centro de eventos</span><span>Alphaville · Barueri</span></p>
+          <h1 class="hero__title">
+            <span class="line"><span>A arena</span></span>
+            <span class="line"><span>de Alphaville</span></span>
+          </h1>
+          <p class="hero__lede">Uma plenária de mais de 2.000&nbsp;m², palco de 245&nbsp;m² e lugar para até <strong>3.000 pessoas</strong>, a poucos minutos dos principais hotéis da região.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#contato">Agendar uma visita</a>
+            <a class="btn btn--ghost" href="#monte">Montar meu evento</a>
+          </div>
+        </div>
+
+        <div class="hero__meter" aria-hidden="true">
+          <span class="hero__roman">MMM</span>
+          <span class="hero__seats"><b data-seat-count>0</b> de 3.000 lugares acesos</span>
+        </div>
+        <p class="hero__hint" aria-hidden="true">Arraste para girar a arena</p>
+        <div class="hero__progress" aria-hidden="true"><i></i></div>
+        <a class="hero__skip" href="#conteudo-pos" data-skip>Pular abertura</a>
       </div>
-      <p class="hero__hint" aria-hidden="true">Arraste para girar a arena</p>
     </section>
+    <span id="conteudo-pos" class="sr"></span>
 
     <!-- Faixa de formatos -->
     <div class="ticker" aria-label="Formatos de evento">
@@ -195,6 +216,7 @@
         <div class="scale__item scale__item--big">
           <dt>Plenária</dt>
           <dd><b data-count="2000">2.000</b><span>m²</span></dd>
+          <svg class="courts" viewBox="0 0 200 120" aria-hidden="true"><rect x="4" y="4" width="45" height="52" rx="1"/><line x1="4" y1="30" x2="49" y2="30"/><rect x="53" y="4" width="45" height="52" rx="1"/><line x1="53" y1="30" x2="98" y2="30"/><rect x="102" y="4" width="45" height="52" rx="1"/><line x1="102" y1="30" x2="147" y2="30"/><rect x="151" y="4" width="45" height="52" rx="1"/><line x1="151" y1="30" x2="196" y2="30"/><rect x="4" y="60" width="45" height="52" rx="1"/><line x1="4" y1="86" x2="49" y2="86"/><rect x="53" y="60" width="45" height="52" rx="1"/><line x1="53" y1="86" x2="98" y2="86"/><rect x="102" y="60" width="45" height="52" rx="1"/><line x1="102" y1="86" x2="147" y2="86"/><rect x="151" y="60" width="45" height="52" rx="1"/><line x1="151" y1="86" x2="196" y2="86"/></svg>
           <p>Cabem oito quadras de tênis lado a lado.</p>
         </div>
         <div class="scale__item">
@@ -418,7 +440,9 @@
 
     <!-- CONTATO -->
     <section class="contact" id="contato" aria-labelledby="contact-title">
-      <div class="contact__arch" aria-hidden="true"></div>
+      <div class="contact__arch" aria-hidden="true">
+        <div class="contact__doors"><i></i><i></i></div>
+      </div>
       <div class="contact__inner">
         <p class="eyebrow"><span>Agende uma visita</span></p>
         <h2 id="contact-title" class="contact__title">Seu evento<br>merece uma arena.</h2>
@@ -479,6 +503,7 @@
       <a href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp</a>
     </nav>
     <p class="footer__legal">© <span data-year>2026</span> Coliseu Convenções</p>
+    <p class="footer__mark" aria-hidden="true">Coliseu</p>
   </footer>
 
   <a class="wa" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
@@ -489,6 +514,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
   <script type="module" src="js/arena.js"></script>
 </body>
 </html>

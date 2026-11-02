@@ -12,7 +12,7 @@ Depois acesse http://localhost:5173. A arena 3D usa módulos ES, então o site p
 
 - `index.html`: conteúdo e seções
 - `css/style.css`: identidade visual (paleta e tipografia ficam em `:root`)
-- `js/arena.js`: arena 3D do topo, com 3.000 lugares (Three.js)
+- `js/arena.js`: abertura cinematográfica em 3D (Three.js): a fachada do Coliseu com os portões de bronze, que se abrem com a rolagem e revelam a arena de 3.000 lugares. O roteiro da câmera fica na constante `KEYS`.
 - `js/main.js`: loader, rolagem, percurso do espaço, simulador de montagem, telão de LED e formulários
 - `assets/img/`: fotos
 
