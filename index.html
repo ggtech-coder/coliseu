@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coliseu Convenções · O maior centro de eventos de Alphaville</title>
+  <meta name="description" content="Plenária de 2.000 m², palco de 245 m², telão de LED e capacidade para até 3.000 pessoas. Convenções, lançamentos, feiras, festas e campeonatos na Av. Juruá, 447 — Alphaville, Barueri.">
+  <meta name="theme-color" content="#150F1E">
+  <meta property="og:title" content="Coliseu Convenções — A arena de Alphaville">
+  <meta property="og:description" content="2.000 m² de plenária, palco de 245 m² e até 3.000 pessoas. Agende uma visita.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Marcellus&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "Coliseu Convenções",
+    "description": "O maior centro de eventos de Alphaville. Plenária de mais de 2.000 m², palco de 245 m² e capacidade para até 3.000 pessoas.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Juruá, 447",
+      "addressLocality": "Barueri",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "maximumAttendeeCapacity": 3000,
+    "openingHours": "Mo-Su 08:00-22:00"
+  }
+  </script>
+</head>
+<body class="is-loading">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Preloader: o contador de lugares preenche a plateia -->
+  <div class="loader" aria-hidden="true">
+    <svg class="loader__arch" viewBox="0 0 120 150">
+      <path d="M10 150 V60 A50 50 0 0 1 110 60 V150" />
+    </svg>
+    <div class="loader__count"><span data-loader-count>0000</span><small>lugares</small></div>
+  </div>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#topo" aria-label="Coliseu Convenções, início">
+      <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 36V17a14 14 0 0 1 28 0v19" />
+        <path d="M13 36V20a7 7 0 0 1 14 0v16" />
+      </svg>
+      <span>Coliseu<em>Convenções</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Seções">
+      <a href="#espaco">O espaço</a>
+      <a href="#monte">Monte seu evento</a>
+      <a href="#palco">Palco</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#local">Como chegar</a>
+    </nav>
+    <a class="btn btn--small" href="#contato">Agendar visita</a>
+    <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu" data-burger>
+      <span></span><span></span><span class="sr">Abrir menu</span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <a href="#espaco">O espaço</a>
+    <a href="#monte">Monte seu evento</a>
+    <a href="#palco">Palco</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#local">Como chegar</a>
+    <a href="#contato">Agendar visita</a>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- HERO — arena 3D com 3.000 lugares -->
+    <section class="hero" id="topo">
+      <canvas class="hero__canvas" data-arena aria-label="Arena em 3D com 3.000 lugares iluminando-se"></canvas>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow"><span>Av. Juruá, 447</span><span>Alphaville · Barueri</span></p>
+        <h1 class="hero__title">
+          <span class="line"><span>A arena</span></span>
+          <span class="line"><span>de Alphaville</span></span>
+        </h1>
+        <p class="hero__lede">O maior centro de eventos da região. Uma plenária de mais de 2.000&nbsp;m², palco de 245&nbsp;m² e lugar para até <strong>3.000 pessoas</strong> — a poucos minutos dos principais hotéis.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#contato">Agendar uma visita</a>
+          <a class="btn btn--ghost" href="#monte">Montar meu evento</a>
+        </div>
+      </div>
+
+      <div class="hero__meter" aria-hidden="true">
+        <span class="hero__roman">MMM</span>
+        <span class="hero__seats"><b data-seat-count>0</b> de 3.000 lugares acesos</span>
+      </div>
+      <p class="hero__hint" aria-hidden="true">Arraste para girar a arena</p>
+    </section>
+
+    <!-- Faixa de formatos -->
+    <div class="ticker" aria-label="Formatos de evento">
+      <div class="ticker__track">
+        <span>Convenções</span><i></i><span>Lançamentos</span><i></i><span>Feiras</span><i></i><span>Festas corporativas</span><i></i><span>Campeonatos</span><i></i><span>Formaturas</span><i></i><span>Shows</span><i></i><span>Congressos</span><i></i>
+        <span aria-hidden="true">Convenções</span><i></i><span aria-hidden="true">Lançamentos</span><i></i><span aria-hidden="true">Feiras</span><i></i><span aria-hidden="true">Festas corporativas</span><i></i><span aria-hidden="true">Campeonatos</span><i></i><span aria-hidden="true">Formaturas</span><i></i><span aria-hidden="true">Shows</span><i></i><span aria-hidden="true">Congressos</span><i></i>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto">
+      <p class="manifesto__text" data-split>Roma construiu o Coliseu para reunir uma cidade inteira diante de um mesmo palco. Em Alphaville, a ideia continua a mesma: <em>um lugar grande o bastante para o seu evento inteiro caber num só olhar.</em></p>
+    </section>
+
+    <!-- O ESPAÇO — percurso do convidado -->
+    <section class="tour" id="espaco" aria-labelledby="tour-title">
+      <div class="tour__intro">
+        <p class="eyebrow"><span>O espaço</span></p>
+        <h2 id="tour-title" class="h2">Do portão ao palco</h2>
+        <p class="tour__lede">Siga o caminho que o seu convidado faz. Cada ambiente foi pensado para uma etapa do evento.</p>
+      </div>
+
+      <div class="tour__pin" data-tour>
+        <div class="tour__plan" aria-hidden="true">
+          <svg viewBox="0 0 400 300" class="plan">
+            <rect class="plan__site" x="4" y="4" width="392" height="292" rx="6"/>
+            <g data-zone="1"><rect x="150" y="262" width="100" height="30" rx="3"/><text x="200" y="281">Entrada</text></g>
+            <g data-zone="2"><rect x="150" y="224" width="100" height="32" rx="3"/><text x="200" y="244">Credenciamento</text></g>
+            <g data-zone="3"><rect x="20" y="214" width="120" height="70" rx="3"/><text x="80" y="252">Hall · patrocínio</text></g>
+            <g data-zone="4"><rect x="260" y="214" width="120" height="70" rx="3"/><text x="320" y="252">Food trucks</text></g>
+            <g data-zone="5"><rect x="20" y="60" width="360" height="146" rx="3"/><text x="200" y="140">Plenária · 2.000 m²</text></g>
+            <g data-zone="6"><rect x="110" y="14" width="180" height="40" rx="3"/><text x="200" y="38">Palco · 245 m²</text></g>
+            <g data-zone="7"><rect x="300" y="14" width="80" height="40" rx="3"/><text x="340" y="38">Camarim</text></g>
+            <path class="plan__route" d="M200 292 V240 H80 V250 M200 240 H320 V250 M200 224 V120 V54 H340"/>
+          </svg>
+          <p class="plan__note">Planta ilustrativa</p>
+        </div>
+
+        <div class="tour__track">
+          <article class="stop" data-stop="1">
+            <span class="stop__step">Etapa 1 de 7</span>
+            <h3>Chegada</h3>
+            <p>Na Av. Juruá, 447, ao lado do Shopping Flamingo. Fácil de achar, fácil de indicar no convite.</p>
+            <figure class="stop__img duo"><img src="assets/img/luzes.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="2">
+            <span class="stop__step">Etapa 2 de 7</span>
+            <h3>Credenciamento</h3>
+            <p>Área própria para check-in, entrega de crachás e kits, sem fila invadindo o hall.</p>
+            <figure class="stop__img duo"><img src="assets/img/networking.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="3">
+            <span class="stop__step">Etapa 3 de 7</span>
+            <h3>Hall e patrocinadores</h3>
+            <p>Um hall de entrada amplo e totalmente personalizável, com espaço dedicado para estandes e ativações de marca.</p>
+            <figure class="stop__img duo"><img src="assets/img/coquetel.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="4">
+            <span class="stop__step">Etapa 4 de 7</span>
+            <h3>Praça de food trucks</h3>
+            <p>Alimentação resolvida dentro do espaço: o intervalo acontece aqui, e o público não se dispersa.</p>
+            <figure class="stop__img duo"><img src="assets/img/festa.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="5">
+            <span class="stop__step">Etapa 5 de 7</span>
+            <h3>Plenária de 2.000 m²</h3>
+            <p>Um vão livre climatizado que vira auditório, banquete, pista ou feira — e comporta até 3.000 pessoas.</p>
+            <figure class="stop__img duo"><img src="assets/img/plateia.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="6">
+            <span class="stop__step">Etapa 6 de 7</span>
+            <h3>O maior palco da região</h3>
+            <p>245 m² de palco, telão de LED de 180 m², iluminação cênica e monitor de retorno para o palestrante.</p>
+            <figure class="stop__img duo"><img src="assets/img/palestra.jpg" alt=""></figure>
+          </article>
+          <article class="stop" data-stop="7">
+            <span class="stop__step">Etapa 7 de 7</span>
+            <h3>Camarim</h3>
+            <p>Camarim exclusivo com banheiros privativos. Quem sobe ao palco chega descansado e sai sem cruzar a plateia.</p>
+            <figure class="stop__img duo"><img src="assets/img/painel.jpg" alt=""></figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCALA -->
+    <section class="scale" aria-labelledby="scale-title">
+      <h2 id="scale-title" class="sr">O espaço em números</h2>
+      <dl class="scale__grid">
+        <div class="scale__item scale__item--big">
+          <dt>Plenária</dt>
+          <dd><b data-count="2000">2.000</b><span>m²</span></dd>
+          <p>Cabem oito quadras de tênis lado a lado.</p>
+        </div>
+        <div class="scale__item">
+          <dt>Pessoas</dt>
+          <dd><b data-count="3000">3.000</b></dd>
+          <p>De 100 convidados a 3.000, no mesmo endereço.</p>
+        </div>
+        <div class="scale__item">
+          <dt>Palco</dt>
+          <dd><b data-count="245">245</b><span>m²</span></dd>
+          <p>Quase uma quadra de tênis inteira.</p>
+        </div>
+        <div class="scale__item">
+          <dt>Telão de LED</dt>
+          <dd><b data-count="180">180</b><span>m²</span></dd>
+          <p>A última fileira enxerga como a primeira.</p>
+        </div>
+        <div class="scale__item">
+          <dt>Funcionamento</dt>
+          <dd><b>08h–22h</b></dd>
+          <p>Todos os dias da semana.</p>
+        </div>
+      </dl>
+    </section>
+
+    <!-- CONFIGURADOR -->
+    <section class="builder" id="monte" aria-labelledby="builder-title">
+      <div class="builder__head">
+        <p class="eyebrow"><span>Monte seu evento</span></p>
+        <h2 id="builder-title" class="h2">Veja o seu evento<br>dentro da plenária</h2>
+        <p>Escolha o formato e o número de convidados. A planta se monta na hora e o briefing sai pronto para enviar.</p>
+      </div>
+
+      <div class="builder__app">
+        <div class="builder__controls">
+          <fieldset class="formats">
+            <legend>Formato</legend>
+            <label><input type="radio" name="format" value="auditorio" checked><span>Auditório</span></label>
+            <label><input type="radio" name="format" value="banquete"><span>Banquete</span></label>
+            <label><input type="radio" name="format" value="coquetel"><span>Coquetel</span></label>
+            <label><input type="radio" name="format" value="feira"><span>Feira</span></label>
+            <label><input type="radio" name="format" value="show"><span>Show</span></label>
+          </fieldset>
+
+          <div class="range">
+            <label for="guests"><span data-guests-label>Convidados</span> <output data-guests-out>800</output></label>
+            <input type="range" id="guests" min="100" max="3000" step="50" value="800" data-guests>
+            <div class="range__scale"><span data-min>100</span><span data-max>3.000</span></div>
+          </div>
+
+          <fieldset class="extras">
+            <legend>Incluir</legend>
+            <label><input type="checkbox" name="extra" value="Telão de LED" checked><span>Telão de LED</span></label>
+            <label><input type="checkbox" name="extra" value="Food trucks"><span>Food trucks</span></label>
+            <label><input type="checkbox" name="extra" value="Área de patrocinadores"><span>Patrocinadores</span></label>
+            <label><input type="checkbox" name="extra" value="Credenciamento"><span>Credenciamento</span></label>
+          </fieldset>
+
+          <dl class="readout">
+            <div><dt>Da capacidade do formato</dt><dd data-occupancy>—</dd></div>
+            <div><dt>Espaço por pessoa</dt><dd data-perperson>—</dd></div>
+          </dl>
+          <p class="readout__tip" data-tip></p>
+
+          <a class="btn btn--block" href="#" data-send-brief target="_blank" rel="noopener">Enviar este briefing</a>
+        </div>
+
+        <figure class="builder__stage">
+          <canvas data-planner aria-label="Planta da plenária com a montagem escolhida"></canvas>
+          <figcaption>Simulação ilustrativa. A capacidade final depende do projeto de montagem.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PALCO / TELÃO -->
+    <section class="stage" id="palco" aria-labelledby="stage-title">
+      <div class="stage__copy">
+        <p class="eyebrow"><span>Palco e tecnologia</span></p>
+        <h2 id="stage-title" class="h2">Sua marca<br>no telão</h2>
+        <p>Escreva o que você quer ver nos 180 m² de LED. É assim que a sua marca aparece para 3.000 pessoas.</p>
+
+        <form class="stage__form" data-led-form>
+          <label for="led-text" class="sr">Texto do telão</label>
+          <input id="led-text" type="text" maxlength="28" value="SUA MARCA AQUI" autocomplete="off" data-led-input>
+          <div class="swatches" role="radiogroup" aria-label="Cor da luz">
+            <button type="button" role="radio" aria-checked="true" data-led-color="#FFB45E" style="--c:#FFB45E"><span class="sr">Âmbar</span></button>
+            <button type="button" role="radio" aria-checked="false" data-led-color="#C45BFF" style="--c:#C45BFF"><span class="sr">Púrpura</span></button>
+            <button type="button" role="radio" aria-checked="false" data-led-color="#F4EEE6" style="--c:#F4EEE6"><span class="sr">Branco</span></button>
+            <button type="button" role="radio" aria-checked="false" data-led-color="#5EE0FF" style="--c:#5EE0FF"><span class="sr">Ciano</span></button>
+          </div>
+        </form>
+
+        <ul class="specs">
+          <li><b>245 m²</b> de palco</li>
+          <li><b>180 m²</b> de telão de LED</li>
+          <li>Iluminação cênica</li>
+          <li>Monitor de retorno no palco</li>
+          <li>Camarim com banheiros privativos</li>
+          <li>Climatização em todos os ambientes</li>
+        </ul>
+      </div>
+
+      <div class="stage__view" aria-hidden="true">
+        <div class="stage__beams"><i></i><i></i><i></i><i></i></div>
+        <canvas class="stage__led" data-led></canvas>
+        <div class="stage__deck"></div>
+        <div class="stage__crowd"></div>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="events" id="eventos" aria-labelledby="events-title">
+      <div class="events__head">
+        <p class="eyebrow"><span>Para que serve</span></p>
+        <h2 id="events-title" class="h2">Um espaço,<br>cinco arenas</h2>
+      </div>
+
+      <div class="events__list" data-events>
+        <article class="event" tabindex="0">
+          <figure class="duo"><img src="assets/img/palestra.jpg" alt="Palestrante em palco diante de plateia" loading="lazy"></figure>
+          <div class="event__body">
+            <h3>Convenções e congressos</h3>
+            <p>Plenária em auditório, credenciamento na entrada e camarim para os palestrantes.</p>
+            <span class="event__cap">até 3.000 pessoas</span>
+          </div>
+        </article>
+        <article class="event" tabindex="0">
+          <figure class="duo"><img src="assets/img/confete.jpg" alt="Público sob chuva de confete e luzes de palco" loading="lazy"></figure>
+          <div class="event__body">
+            <h3>Lançamentos e ativações</h3>
+            <p>O telão de 180 m² e o hall personalizável viram parte da campanha.</p>
+            <span class="event__cap">hall + palco + LED</span>
+          </div>
+        </article>
+        <article class="event" tabindex="0">
+          <figure class="duo"><img src="assets/img/gala.jpg" alt="Mesa posta para jantar de gala" loading="lazy"></figure>
+          <div class="event__body">
+            <h3>Festas e jantares corporativos</h3>
+            <p>Banquete, coquetel ou pista: a plenária muda de forma a cada edição.</p>
+            <span class="event__cap">confraternizações e premiações</span>
+          </div>
+        </article>
+        <article class="event" tabindex="0">
+          <figure class="duo"><img src="assets/img/networking.jpg" alt="Pessoas conversando em pé em evento" loading="lazy"></figure>
+          <div class="event__body">
+            <h3>Feiras e exposições</h3>
+            <p>Corredores largos, área para estandes e praça de food trucks para o visitante ficar.</p>
+            <span class="event__cap">estandes e expositores</span>
+          </div>
+        </article>
+        <article class="event" tabindex="0">
+          <figure class="duo"><img src="assets/img/show.jpg" alt="Multidão diante de palco iluminado" loading="lazy"></figure>
+          <div class="event__body">
+            <h3>Shows e campeonatos</h3>
+            <p>Pé-direito, palco e área livre para arquibancada, ringue, tatame ou pista.</p>
+            <span class="event__cap">esporte e entretenimento</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="local" id="local" aria-labelledby="local-title">
+      <div class="local__copy">
+        <p class="eyebrow"><span>Como chegar</span></p>
+        <h2 id="local-title" class="h2">No centro<br>de Alphaville</h2>
+        <address>
+          Av. Juruá, 447<br>
+          Alphaville · Barueri · SP
+        </address>
+        <ul class="local__list">
+          <li><b>Ao lado</b> do Shopping Flamingo</li>
+          <li><b>5 min</b> dos principais hotéis da região</li>
+          <li><b>Acesso</b> pela Rodovia Castello Branco</li>
+        </ul>
+        <div class="local__actions">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Juru%C3%A1%2C+447+-+Alphaville%2C+Barueri+-+SP" target="_blank" rel="noopener">Traçar rota</a>
+          <a class="btn btn--ghost" href="https://waze.com/ul?q=Av.%20Jurua%20447%20Alphaville%20Barueri&navigate=yes" target="_blank" rel="noopener">Abrir no Waze</a>
+        </div>
+      </div>
+      <div class="local__map">
+        <iframe title="Mapa: Av. Juruá, 447, Alphaville" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Av.%20Juru%C3%A1%2C%20447%20-%20Alphaville%2C%20Barueri%20-%20SP&z=15&output=embed"></iframe>
+        <div class="local__pin" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M6 36V17a14 14 0 0 1 28 0v19" /><path d="M13 36V20a7 7 0 0 1 14 0v16" /></svg>
+          <div><b>Coliseu Convenções</b><span>Av. Juruá, 447</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="h2">Perguntas de quem<br>está organizando</h2>
+      <div class="faq__list">
+        <details>
+          <summary>Qual é a capacidade máxima?</summary>
+          <p>O Coliseu recebe eventos de 100 a 3.000 pessoas. O número exato depende do formato: auditório comporta mais gente que banquete, por exemplo. Use o simulador acima para ter uma referência.</p>
+        </details>
+        <details>
+          <summary>Quais são os horários de funcionamento?</summary>
+          <p>Todos os dias, das 8h às 22h. Os horários de montagem, evento e desmontagem são combinados antes da contratação.</p>
+        </details>
+        <details>
+          <summary>O espaço tem ar-condicionado?</summary>
+          <p>Sim, todos os ambientes são climatizados: plenária, hall, credenciamento e camarim.</p>
+        </details>
+        <details>
+          <summary>Posso personalizar o espaço com a identidade da minha marca?</summary>
+          <p>Sim. O hall de entrada, a área de patrocinadores e o telão de LED foram pensados para receber a identidade visual do seu evento.</p>
+        </details>
+        <details>
+          <summary>Como funciona a alimentação?</summary>
+          <p>O Coliseu tem uma praça de food trucks dentro do espaço. Para banquetes e coquetéis, o buffet é definido junto com a equipe na proposta.</p>
+        </details>
+        <details>
+          <summary>Dá para conhecer o espaço antes de fechar?</summary>
+          <p>Dá, e recomendamos. Agende uma visita técnica pelo formulário abaixo e a equipe mostra cada ambiente com você.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact__arch" aria-hidden="true"></div>
+      <div class="contact__inner">
+        <p class="eyebrow"><span>Agende uma visita</span></p>
+        <h2 id="contact-title" class="contact__title">Seu evento<br>merece uma arena.</h2>
+
+        <form class="contact__form" data-contact novalidate>
+          <div class="field field--half">
+            <label for="f-nome">Seu nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+            <span class="field__error">Informe seu nome.</span>
+          </div>
+          <div class="field field--half">
+            <label for="f-empresa">Empresa</label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-tipo">Tipo de evento</label>
+            <select id="f-tipo" name="tipo">
+              <option>Convenção ou congresso</option>
+              <option>Lançamento ou ativação</option>
+              <option>Festa ou jantar corporativo</option>
+              <option>Feira ou exposição</option>
+              <option>Show ou campeonato</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-pessoas">Número de convidados</label>
+            <input id="f-pessoas" name="pessoas" type="number" min="100" max="3000" step="50" placeholder="Ex.: 800" inputmode="numeric">
+          </div>
+          <div class="field">
+            <label for="f-data">Data prevista</label>
+            <input id="f-data" name="data" type="date">
+          </div>
+          <div class="field field--wide">
+            <label for="f-msg">Conte um pouco sobre o evento</label>
+            <textarea id="f-msg" name="msg" rows="3"></textarea>
+          </div>
+          <button class="btn btn--block field--wide" type="submit">Enviar pelo WhatsApp</button>
+          <p class="contact__note field--wide">Você será levado ao WhatsApp com a mensagem pronta. Nada é enviado antes de você confirmar.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 36V17a14 14 0 0 1 28 0v19" />
+        <path d="M13 36V20a7 7 0 0 1 14 0v16" />
+      </svg>
+      <span>Coliseu Convenções</span>
+    </div>
+    <p>Av. Juruá, 447 · Alphaville · Barueri · SP<br>Todos os dias, das 8h às 22h</p>
+    <nav aria-label="Rodapé">
+      <a href="#espaco">O espaço</a>
+      <a href="#monte">Monte seu evento</a>
+      <a href="#local">Como chegar</a>
+      <a href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+    <p class="footer__legal">© <span data-year>2026</span> Coliseu Convenções</p>
+  </footer>
+
+  <a class="wa" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/arena.js"></script>
+</body>
+</html>
